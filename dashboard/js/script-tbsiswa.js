@@ -18,13 +18,12 @@ function saveSiswa() {
 	var nis = document.getElementById('nis').value;
 	var nama = document.getElementById('nama').value;
 	var kelas = document.getElementById('kelas').value;
-	var jurusan = document.getElementById('jurusan').value;
 	var spp = document.getElementById('spp').value;
 	var cmd = document.getElementById('simpan').value;
 
 	//alert(nis + " " + nama + " " + kelas + " " + jurusan + " " + spp);
 
-	var url = "data/tbsiswa/func.php?id="+id+"&nis="+nis+"&nama="+nama+"&jurusan="+jurusan+"&spp="+spp+"&kelas="+kelas+"&cmd="+cmd;
+	var url = "data/tbsiswa/func.php?id="+id+"&nis="+nis+"&nama="+nama+"&spp="+spp+"&kelas="+kelas+"&cmd="+cmd;
 	var xhttp;
 
 	xhttp = new XMLHttpRequest();
@@ -41,7 +40,6 @@ function saveSiswa() {
 
   	document.getElementById('nis').value = "";
 	document.getElementById('nama').value = "";
-	document.getElementById('jurusan').value = "";
 	document.getElementById('kelas').value = "";
 	document.getElementById('spp').value = "";
 	document.getElementById('simpan').value = "save";
@@ -64,12 +62,11 @@ function deleteSiswa(id){
 	loadSiswa();
 }
 
-function editSiswa(nis, nama, kelas, jurusan, spp) {
+function editSiswa(nis, nama, kelas, spp) {
 	document.getElementById('id').value = nis;
 	document.getElementById('nis').value = nis;
 	document.getElementById('nama').value = nama;
 	document.getElementById('kelas').value = kelas;
-	document.getElementById('jurusan').value = jurusan;
 	document.getElementById('spp').value = spp;
 	document.getElementById('simpan').value = "update";
 }	
