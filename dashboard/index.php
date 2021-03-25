@@ -45,6 +45,7 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/script-tbhari.js"></script>
     <script src="js/script-tbkelas.js"></script>
     <script src="js/script-tbjam.js"></script>
+    <script src="js/script-tbwaktutidaktersedia.js"></script>
 
 </head>
 
@@ -118,7 +119,7 @@ $siswa = mysqli_num_rows($query4);
                             <i class="fas fa-fw fa-calendar"></i> Hari
                         </a>
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item" onclick="loadTbWaktu()">
                             <i class="fas fa-fw fa-ban"></i> Waktu tidak bersedia
                         </a>
 
@@ -499,6 +500,21 @@ function loadTbjam() {
             document.getElementById("data").innerHTML = data;
         }
     };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+function loadTbWaktu() {
+    var url = "data/tbwaktutidaktersedia/waktu.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    }
     xhttp.open("GET", url, true);
     xhttp.send();
 }
