@@ -15,7 +15,6 @@ require '../../koneksi.php';
                         <th>Nis</th>
                         <th>Nama</th>
                         <th>Kelas</th>
-                        <th>Jurusan</th>
                         <th>SPP lunas hingga</th>
                         <th>Action</th>
                     </tr>
@@ -31,17 +30,15 @@ require '../../koneksi.php';
                             $nis = $result['nis'];
                             $nama = $result['nama'];
                             $kelas = $result['kelas'];
-                            $jurusan = $result['jurusan'];
                             $spp = $result['spp'];
                         ?>
                         <tr>
                             <td><?= $nis ?></td>
                             <td><?= $nama ?></td>
                             <td><?= $kelas ?></td>
-                            <td><?= $jurusan ?></td>
                             <td><?= $spp ?></td>
                             <td>
-                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editSiswa(<?= "'$nis','$nama','$kelas','$jurusan','$spp'"; ?>)"> <i class="fa fa-edit"></i> Edit </button>
+                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editSiswa(<?= "'$nis','$nama','$kelas','$spp'"; ?>)"> <i class="fa fa-edit"></i> Edit </button>
 
                                 <button type="button" id="delete" name="hapus" class="btn btn-danger btn-sm w-100 mt-1" onclick="deleteSiswa('<?= $nis ?>')"> <i class="fa fa-trash"></i> Hapus </button>
                             </td>
