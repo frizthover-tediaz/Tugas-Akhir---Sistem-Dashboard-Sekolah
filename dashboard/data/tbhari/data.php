@@ -47,7 +47,7 @@ require '../../koneksi.php';
                             <td><?= $x ?></td>
                             <td><?= $nama ?></td>
                             <td>
-                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editHari(<?= "'$nama','$id'" ?>)"> <i class="fa fa-edit"></i> Edit </button>
+                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editHari(<?= "'$id','$nama'" ?>)"> <i class="fa fa-edit"></i> Edit </button>
 
                                 <button type="button" id="delete" name="hapus" class="btn btn-danger btn-sm w-100 mt-1" onclick="deleteHari('<?= $id ?>')"> <i class="fa fa-trash"></i> Hapus </button>
                             </td>
