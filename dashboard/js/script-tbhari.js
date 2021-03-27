@@ -54,7 +54,7 @@ function deleteHari(id){
 	xhttp.send();
 }
 
-function editHari(nama, id) {
+function editHari(id, nama) {
 	document.getElementById('id').value = id;
 	document.getElementById('nama').value = nama;
 	document.getElementById('simpan').value = "update";
