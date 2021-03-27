@@ -14,7 +14,7 @@ if( $cmd === 'save' ) :
 else :
 
 	$sql = "UPDATE tbhari SET 
-	nama = '$nama', 
+	nama = '$nama'
 	WHERE id = '$id'";
 	$query = mysqli_query($conn, $sql) or die ($sql);
 

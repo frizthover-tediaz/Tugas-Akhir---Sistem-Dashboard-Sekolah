@@ -17,8 +17,6 @@ require '../../koneksi.php';
                         <th>No</th>
                         <th>Kode Guru</th>
                         <th>Pelajaran</th>
-                        <th>Kategori</th>
-                        <th>KKM</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -34,17 +32,13 @@ require '../../koneksi.php';
                             $id = $result['id'];
                             $kode = $result['kode'];
                             $pelajaran = $result['mapel'];
-                            $kategori = $result['kategori'];
-                            $kkm = $result['kkm'];
                         ?>
                         <tr>
                             <td><?= $x ?></td>
                             <td><?= $kode ?></td>
                             <td><?= $pelajaran ?></td>
-                            <td><?= $kategori ?></td>
-                            <td><?= $kkm ?></td>
                             <td>
-                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editMapel(<?= "'$id','$kode','$pelajaran','$kategori','$kkm'"; ?>)"> <i class="fa fa-edit"></i> Edit </button>
+                                <button type="button" id="edit" name="ubah" class="btn btn-success btn-sm w-100" onclick="editMapel(<?= "'$id','$kode','$pelajaran'"; ?>)"> <i class="fa fa-edit"></i> Edit </button>
 
                                 <button type="button" id="delete" name="hapus" class="btn btn-danger btn-sm w-100 mt-1" onclick="deleteMapel('<?= $id ?>')"> <i class="fa fa-trash"></i> Hapus </button>
                             </td>
