@@ -59,27 +59,12 @@ $siswa = mysqli_num_rows($query4);
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>  
 
             <!-- Nav Item - Jadwal -->
             <li class="nav-item">
                 <a class="nav-link" href="">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Jadwal</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Kalender -->
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-calendar-minus"></i>
-                    <span>Kalender</span>
                 </a>
             </li>
 
@@ -90,6 +75,12 @@ $siswa = mysqli_num_rows($query4);
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <div class="container my-auto" style="color: white;margin-bottom: 4%!important;">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; SMK Immanuel Pontianak <?= date("Y") ?></span>
+                </div>
             </div>
 
         </ul>
@@ -195,7 +186,7 @@ $siswa = mysqli_num_rows($query4);
 
                                             <h6 class="black-pel mr-4">Suvento</h6>
 
-                                            <p class="time mr-2">10:00 - 12:00</p>
+                                            <p class="time mr-2">09:00 - 10:00</p>
                                         </div>
 
 
@@ -213,7 +204,7 @@ $siswa = mysqli_num_rows($query4);
 
                                             <h6 class="black-pel mr-4">Sondang Elisabeth</h6>
 
-                                            <p class="time mr-2">09:00 - 10:00</p>
+                                            <p class="time mr-2">11:00 - 12:00</p>
                                         </div>
 
 
@@ -231,16 +222,6 @@ $siswa = mysqli_num_rows($query4);
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SMK Immanuel Pontianak <?= date("Y") ?></span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
