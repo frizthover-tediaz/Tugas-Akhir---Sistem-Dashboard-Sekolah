@@ -45,8 +45,6 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/script-tbhari.js"></script>
     <script src="js/script-tbkelas.js"></script>
     <script src="js/script-tbjam.js"></script>
-    <script src="js/script-tbmapel.js"></script>
-    <script src="js/script-tbwaktutidaktersedia.js"></script>
 
 </head>
 
@@ -104,7 +102,7 @@ $siswa = mysqli_num_rows($query4);
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Data Lain:</h6>
 
-                        <a class="collapse-item" onclick="loadTbMapel()">
+                        <a class="collapse-item" href="index.php">
                             <i class="fas fa-fw fa-book"></i> Pelajaran
                         </a>
 
@@ -120,7 +118,7 @@ $siswa = mysqli_num_rows($query4);
                             <i class="fas fa-fw fa-calendar"></i> Hari
                         </a>
 
-                        <a class="collapse-item" onclick="loadTbWaktu()">
+                        <a class="collapse-item" href="index.php">
                             <i class="fas fa-fw fa-ban"></i> Waktu tidak bersedia
                         </a>
 
@@ -132,7 +130,7 @@ $siswa = mysqli_num_rows($query4);
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetable"
                     aria-expanded="true" aria-controls="collapsetable">
-                    <i class="fas fa-database fa-cog"></i>
+                    <i class="fas fa-database fa-cog" style="width:17px;text-align: center"></i>
                     <span>Proses Data</span>
                 </a>
                 <div id="collapsetable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -150,6 +148,12 @@ $siswa = mysqli_num_rows($query4);
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <div class="container my-auto" style="color: white;margin-bottom:4% !important">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; SMK Immanuel Pontianak <?= date("Y") ?></span>
+                </div>
             </div>
 
             
@@ -351,17 +355,6 @@ $siswa = mysqli_num_rows($query4);
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SMK Immanuel Pontianak <?= date("Y") ?></span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
         </div>
         <!-- End of Content Wrapper -->
 
@@ -387,7 +380,7 @@ $siswa = mysqli_num_rows($query4);
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="../">Logout</a>
                 </div>
             </div>
         </div>
@@ -501,36 +494,6 @@ function loadTbjam() {
             document.getElementById("data").innerHTML = data;
         }
     };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-}
-
-function loadTbWaktu() {
-    var url = "data/tbwaktutidaktersedia/waktu.php";
-    var xhttp;
-
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = this.responseText;
-            document.getElementById("data").innerHTML = data;
-        }
-    }
-    xhttp.open("GET", url, true);
-    xhttp.send();
-}
-
-function loadTbMapel() {
-    var url = "data/tbmapel/mapel.php";
-    var xhttp;
-
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            data = this.responseText;
-            document.getElementById("data").innerHTML = data;
-        }
-    }
     xhttp.open("GET", url, true);
     xhttp.send();
 }
