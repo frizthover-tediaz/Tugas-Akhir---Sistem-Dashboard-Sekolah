@@ -87,7 +87,7 @@ require '../../koneksi.php';
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
+                        <thead style="text-align: center">
                             <tr>
                                 <th>Nis</th>
                                 <th>Nama</th>
@@ -97,7 +97,7 @@ require '../../koneksi.php';
                             </tr>
                         </thead>
                         
-                        <tbody>
+                        <tbody style="text-align: center">
                             <?php 
                                 $query = mysqli_query($conn, "SELECT * FROM tbsiswa");
                             ?>
