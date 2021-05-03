@@ -182,9 +182,9 @@ $siswa = mysqli_num_rows($query4);
                                         <div class="jadwal-content d-flex justify-content-between align-items-center">
                                             <h5 class="black-pel mr-2" style="color: #03a9f4;">XI TKJ 3</h5>
 
-                                            <p class="garis mr-2">PKN</p>
+                                            <p class="garis mr-2">|</p>
 
-                                            <h6 class="black-pel mr-4">-</h6>
+                                            <h6 class="black-pel mr-4">PKN</h6>
 
                                             <p class="time mr-2">09:00 - 10:00</p>
                                         </div>
